@@ -11,7 +11,9 @@ Fechas, recursos e información -> [https://github.com/EmilioOcelotl/centro20-I_
 
 Introducción breve -> [https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816/README.md](https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816)
 
-Ejecución de Processing, PDE, proyectos anteriores. 
+Ejecución de Processing, PDE, sketches. 
+
+Variables, coloreado del código y componentes de un sketch de Processing.
 
 ## Funciones (en processing)
 
@@ -22,6 +24,8 @@ Algunas de ellas son *size()* *line()* *fill()*
 Las posibilidades de las funciones está en la modularidad. Son unidades de software independientes que pueden ser usadas para construir programas más complejos. 
 
 Más adelante aprenderemos a escribir funciones para extender las capacidades de Processing más allá de sus características incorporadas. 
+
+Imprimir en la consola. 
 
 ### Formas
 
@@ -100,18 +104,20 @@ Las preguntas formuladas dentro de un programa son siempre declaraciones lógica
 Por ejemplo, si la variable 'i' es igual a cero, dibuja una línea.
 
 ```java
-size(640, 360);
-background(0);
-
-for(int i = 10; i < width; i += 10) {
-  // Si 'i' divide entre 20 sin residuo entonces dibuja la primera línea, de otro modo, dibuja la segunda línea
-  if((i % 20) == 0) {
-    stroke(255);
-    line(i, 80, i, height/2);
-  } else {
-    stroke(153);
-    line(i, 20, i, 180); 
-  }
+void setup() {
+size(240, 120);
+strokeWeight(30);
+}
+void draw() {
+background(204);
+stroke(102);
+line(40, 0, 70, height);
+if (mousePressed) {
+stroke(0);
+} else {
+stroke(255);
+}
+line(0, 70, width, 50);
 }
 ```
 ## Loops
@@ -195,7 +201,7 @@ Un diagrama puede clarificar el flujo de un *for loop*
 
 Cabe destacar que la declaración *text* es siempre una expresión relacional que compara dos valores con un operador relacional. En el ejemplo de arriba, la expresión es "i < 400" y el operador es < (menor que). Los operadores relacionales más comunes son: 
 
-| Símbolo | operación        |
+| Símbolo | Operación        |
 |:-------:|:----------------:|
 | >       | Mayor que        | 
 | <       | Menor que        |
@@ -206,7 +212,7 @@ Cabe destacar que la declaración *text* es siempre una expresión relacional qu
 
 El resultado de la evaluación siempre es cierto o falso. 
 
-###`while()`
+### `while()`
 
 Controla una secuencia de repeticiones. La estructura `while()` ejecuta continuamente una serie de declaraciones mientras que la evaluación de la expresión se mantiene en cierto. 
 
@@ -261,7 +267,98 @@ noStroke();
 ellipse(268, 118, 200, 200);
 ```
 
+Si queremos usar valores más allá de la escala de grises, podemos usar tres parámetros para especificar los componentes de un color (rojo, verde y azu). 
+
+```java
+size(480, 120);
+noStroke();
+background(0, 26, 51);
+fill(255, 0, 0);
+ellipse(132, 82, 200, 200);
+fill(0, 255, 0);
+ellipse(228, -16, 200, 200);
+fill(0, 0, 255);
+ellipse(268, 118, 200, 200);
+```
+
+La definición de un color con la convención RGB proviene de la manera en que la computadora define colores en la pantalla. 
+
+Los valores RGB se pueden definir en un rango que va de 0 a 255. 
+
+Hay un cuarto valor que se puede utilizar para definir un valor de color. El valor alpha define transparencia. 
+
+Este valor, como los que hemos visto hasta el momento, puede ir de 0 a 255 donde 0 define un color completalmente transparente y 255 un color completamente opaco. 
+
+```java
+size(480, 120);
+noStroke();
+background(204, 226, 225);
+fill(255, 0, 0, 160);
+ellipse(132, 82, 200, 200);
+fill(0, 255, 0, 160);
+ellipse(228, -16, 200, 200); 
+27fill(0, 0, 255, 160);
+ellipse(268, 118, 200, 200);
+```
+
+Hay otras formas de definir el color. Más adelante las abordaremos. 
+
 ## Aleatoriedad
+
+Las computadoras pueden generar valores y comportamientos líneales muy facilmente. Sin embargo, el mundo físico se comporta de maneras diversas, muchas veces alejadas de ese comportamiento lineal. 
+
+Es posible simular comportamientos y cualidad inpredecibles al generar números aleatorios. 
+
+En Processing, una función que puede realizar esto es la función `random()` 
+
+Antes de dibujar...
+
+```java
+void draw() {
+float r = random(0, mouseX);
+println(r);
+}
+```
+
+El ejemplo anterior imprime valores aleatorios en la Consola, en un rango que está limitado por la posición del mouse en el eje X. 
+
+La función `random()` siempre devuelve un valor de punto flotante. Hay que asegurarse que la variable declarada sea un número de punto flotante. Esto se puede determinar con `float`
+
+El siguiente ejemplo usa los valores que genera `random()` para cambiar la posición de las líneas en la pantalla. Si el mouse se encuentra a la izquierda de la pantalla, el cambio es pequeño, si se mueve a la derecha, el valor se incrementa y el cambio es más notorio. 
+
+```java
+void setup() {
+size(240, 120);
+}
+void draw() {
+background(204);
+for (int x = 20; x < width; x += 20) {
+float mx = mouseX / 10;
+float offsetA = random(-mx, mx);
+float offsetB = random(-mx, mx);
+line(x + offsetA, 20, x - offsetB, 100);
+}
+}
+```
+
+Si generamos valores alteatorios para mover objetos, la imagen resultante puede ser, aparentemente, más "natural". En el siguiente ejemplo, la posición del círculo se modifica por valores aleatorios en cada vuelta del `draw`. Debido a que el `background` no está declarado ni se actualiza en `draw()`, las posiciones anteriores permanecen dibujadas. 
+
+```java
+float speed = 2.5;
+int diameter = 20;
+float x;
+float y;
+void setup() {
+size(240, 120);
+x = width/2;
+y = height/2;
+}
+void draw() {
+x += random(-speed, speed);
+y += random(-speed, speed);
+ellipse(x, y, diameter, diameter);
+}
+```
 
 ## Transformaciones (pushMatrix(), popMatrix(), rotate())
 
