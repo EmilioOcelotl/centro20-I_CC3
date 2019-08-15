@@ -5,8 +5,6 @@ Objetivo del curso: Aplicar procesos algorítmicos para la conceptualización y 
 
 Salón B 503
 
-contacto: eocelotl@centro.edu.mx
-
 ## Fechas
 
 - [ ] [16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1. Repaso
@@ -53,7 +51,9 @@ contacto: eocelotl@centro.edu.mx
 
 - Tercer parcial: participación 5% y ejercicio a entregar 10%
 
-## Ligas
+## Enlaces y lecturas sugeridas
+
+- [What is poetic about computation?](https://poeticcomputation.info/chapters/ch.1/)
 
 - [DevArt. Art made with code](https://devart.withgoogle.com/)
 

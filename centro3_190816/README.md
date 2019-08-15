@@ -7,9 +7,9 @@ Fechas, recursos e información -> [https://github.com/EmilioOcelotl/centro20-I_
 
 [Type and Form sculpture](https://devart.withgoogle.com/#/catalogued/6682104213536768)
 
-Introducción breve -> [https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816/README.md](https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816)
+## Evaluación
 
-## Evaluación del grupo
+Introducción breve -> [https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816/README.md](https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816)
 
 Ejecución de Processing, PDE, proyectos anteriores. 
 
@@ -185,11 +185,87 @@ for (init; test; update) {
 statements
 }
 ```
+En *init* fijamos el valor inicial, muchas veces declarando una variable que usaremos dentro del loop for. 
 
-En *init* fijamos el valor inicial, muchas veces declarando una variable que usaremos dentro del loop for. El nombre de variable `i` 
+El nombre de variable `i` es frecuentemente usado, pero no hay nada especial en él. 
+
+*Test* evalúa el valor de esta variable (para el caso del primer código, revisa si `i` sigue siendo menor que 400). *Update* cambia el valor de la variable, agregando 60 antes de repetir el *loop*.
+
+Un diagrama puede clarificar el flujo de un *for loop* 
+
+Cabe destacar que la declaración *text* es siempre una expresión relacional que compara dos valores con un operador relacional. En el ejemplo de arriba, la expresión es "i < 400" y el operador es < (menor que). Los operadores relacionales más comunes son: 
+
+| Símbolo | operación        |
+|:-------:|:----------------:|
+| >       | Mayor que        | 
+| <       | Menor que        |
+| >=      | Mayor o igual que|
+| <=      | Menor que        |
+| ==      | Igual a          |
+| !=      | No es igual a    |
+
+El resultado de la evaluación siempre es cierto o falso. 
+
+###`while()`
+
+Controla una secuencia de repeticiones. La estructura `while()` ejecuta continuamente una serie de declaraciones mientras que la evaluación de la expresión se mantiene en cierto. 
+
+```java	
+while (expression) {
+  statements
+}
+```
+
+La expresión puede ser "peligrosa" debido a que el código dentro del *loop while* no terminará hasta que la expresión dentro de *while* se convierta en falsa.
+
+Ejemplo: 
+
+```java
+int i = 0;
+while (i < 80) {
+  line(30, i, 80, i);
+  i = i + 5;
+}
+```
 
 ## Color
+
+Hasta el momento hemos dibujado formas en blanco y negro y el fondo de la ventana se ha mantenido en gris claro. 
+
+Para cambiar esto vamos a utilizar las funciones `background()` `fill` y `stroke`. 
+
+Los valores de los parámetros tienen el rango de 0 a 255, donde 255 es blanco, 128 es un gris medio y 0 es negro. 
+
+El siguiente ejemplo muestra tres diferentes valores en circulos que están sobre un fondo negro. 
+
+```java
+size(480, 120);
+background(0); // negro
+fill(204); // gris claro
+ellipse(132, 82, 200, 200); // círculo gris claro
+fill(153); // gris medio 
+ellipse(228, -16, 200, 200); // círculo gris medio
+fill(102); // gris oscuro
+ellipse(268, 118, 200, 200); círculo gris oscuro
+```
+
+Es posible deshabilitar el contorno y el relleno con `noStroke()` y `noFill()`. 
+
+```java
+size(480, 120);
+fill(153);
+ellipse(132, 82, 200, 200);
+noFill();
+ellipse(228, -16, 200, 200);
+noStroke();
+ellipse(268, 118, 200, 200);
+```
 
 ## Aleatoriedad
 
 ## Transformaciones (pushMatrix(), popMatrix(), rotate())
+
+## Referencias 
+
+[Processing Reference](https://processing.org/reference/)
+
