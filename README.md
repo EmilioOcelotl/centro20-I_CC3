@@ -7,11 +7,55 @@ Salón B 503
 
 contacto: eocelotl@centro.edu.mx
 
-## fechas
+## Fechas
 
 - [ ] [16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1. Repaso
 
+- [ ] 23 de agosto - Clase 2. Repaso
+
+- [ ] 30 de agosto - Clase 3. Introducción a programación orientada a objetos
+
+- [ ] 6 de septiembre - Clase 4. Programación orientada a objetos
+
+- [ ] 13 de septiembre - Clase 5. Práctica de programación orientada a objetos
+
+- [ ] 20 de septiembre - Clase 6. Matrices y vectores
+
+- [ ] 27 de septiembre - Clase 7. Matrices y vectores
+
+- [ ] 4 de octubre - Clase 8. Práctica matrices y vectores
+
+- [ ] 11 de octubre - Clase 9. Manipulación de imagen fija
+
+- [ ] 18 de octubre - Clase 10. Práctica de manipulación de imagen fija
+
+- [ ] 25 de octubre - Clase 11. Trigonometría I
+
+- [ ] 1 de noviembre - Clase 12. Trigonometría II
+
+- [ ] 8 de noviembre - Clase 13. Práctica trigonométrica 
+
+- [ ] 15 de noviembre - Clase 14. Ruido
+
+- [ ] 22 de noviembre - Clase 15. Sonido
+
+- [ ] 29 de noviembre - Clase 16. Análisis de audio
+
 ## Evaluación 
+
+- Carpeta de trabajos finales: selección de al menos 5 trabajos realizados durante el semestre con sus respectivas variaciones 25%
+
+- Lecturas: Pendientes 10%
+
+- Primer parcial: participación 5% y ejercicio a entregar 20%
+
+- Segundo parcial: participación 5% y ejercicio a entregar 20%
+
+- Tercer parcial: participación 5% y ejercicio a entregar 10%
+
+## Ligas
+
+- [DevArt. Art made with code](https://devart.withgoogle.com/)
 
 ## Referencias 
 

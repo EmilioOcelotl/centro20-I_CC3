@@ -7,7 +7,7 @@ Fechas, recursos e información -> [https://github.com/EmilioOcelotl/centro20-I_
 
 [Type and Form sculpture](https://devart.withgoogle.com/#/catalogued/6682104213536768)
 
-Algunas ideas introductorias se pueden encontrar en -> [https://github.com/EmilioOcelotl/centro20-I_CC2/tree/master/centro2_190816/README.md](https://github.com/EmilioOcelotl/centro20-I_CC2/tree/master/centro2_190816)
+Introducción breve -> [https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816/README.md](https://github.com/EmilioOcelotl/centro20-I_CC2/blob/master/centro2_190816)
 
 ## Evaluación del grupo
 
@@ -17,11 +17,79 @@ Ejecución de Processing, PDE, proyectos anteriores.
 
 Las funciones son los los bloques basicos para construir programas en Processing. 
 
-Algunas de ellas son size() line() fill() 
+Algunas de ellas son *size()* *line()* *fill()* 
 
-El poder de las funciones está en la modularidad. Son unidades de software independientes que pueden ser usadas para construir programas más complejos. 
+Las posibilidades de las funciones está en la modularidad. Son unidades de software independientes que pueden ser usadas para construir programas más complejos. 
 
-Más adelante el curso aprenderemos a escribir funciones para extender las capacidades de Processing más allá de sus características incorporadas. 
+Más adelante aprenderemos a escribir funciones para extender las capacidades de Processing más allá de sus características incorporadas. 
+
+### Formas
+
+Mientras tanto, recordemos las formas básicas 
+
+`line(x1, y1, x2, y2)`
+
+Ejemplo: 
+
+```java
+size(480, 120);
+line(20, 50, 420, 110);
+```
+
+Rectángulos...
+
+`rect(x, y, anchura, altura)`
+
+```java
+// Dibujar un rectángulo con punto inicial en (180, 60), ancho de 220 y alto de 40
+size(480, 120);
+rect(180, 60, 220, 40);
+```
+Círculos...
+
+`ellipse(x, y, width height)` 
+
+```java
+size(480, 120);
+ellipse(278, -100, 400, 400);
+```
+
+Otras formas son: `triangle, quad` y `arc.` 
+
+El sistema de coordenadas inicia arriba y a la izquierda ¿Por qué?
+
+El orden de las instrucciones importa, en este ejemplo el rectángulo se dibuja encima del círculo debido a que aparece después en el código.
+
+```java
+size(480, 120);
+ellipse(140, 0, 190, 190);
+rect(160, 30, 260, 20);
+```
+
+En este otro, la elipse se encuentra encima debido a que aparece después 
+
+```java
+size(480, 120);
+rect(160, 30, 260, 20);
+ellipse(140, 0, 190, 190);
+```
+
+### `setup()` y `draw()`
+
+Processing puede correr continuamente para dibujar o para interactuar en el tiempo. Para realizar esto, Processing tiene la función *draw()*. 
+
+El código que se encuentra en *draw()* corre de arriba a abajo y se repite hasta que detienes el programa. Cada "vuelta" del *draw()* es un *frame*. 
+
+Por *default* Processing corre a 60 fotogramas por segundo, esto quiere decir que hay 60 ciclos por segundo dentro del *draw()* 
+
+```java
+void draw() {
+println("I'm drawing");
+println(frameCount);
+}
+```
+
+Processing también tiene una función llamada *setup()* que corre una vez que el programa inicia. 
 
 ## Condicionales
 
@@ -36,8 +104,7 @@ size(640, 360);
 background(0);
 
 for(int i = 10; i < width; i += 10) {
-  // If 'i' divides by 20 with no remainder draw 
-  // the first line, else draw the second line
+  // Si 'i' divide entre 20 sin residuo entonces dibuja la primera línea, de otro modo, dibuja la segunda línea
   if((i % 20) == 0) {
     stroke(255);
     line(i, 80, i, height/2);
@@ -49,7 +116,9 @@ for(int i = 10; i < width; i += 10) {
 ```
 ## Loops
 
-Por default, Processing *loopea* continuamente el código escrito en `draw()`. Sin embargo, el *loop* `draw()` puede detenerse cuando escribimos `noLoop()`. En ese caso, el loop `draw()` puede reanudarse con `loop()`; 
+### `loop()` y `noLoop()`
+
+Como ya vimos, Processing *loopea* continuamente el código escrito en `draw()`. Sin embargo, el *loop* `draw()` puede detenerse cuando escribimos `noLoop()`. En ese caso, el loop `draw()` puede reanudarse con `loop()`; 
 
 Ejemplo: 
 
@@ -77,7 +146,10 @@ void mousePressed() {
 void mouseReleased() {
   noLoop();  // Releasing the mouse stops looping draw()
 }
-``` 
+```
+
+### `for()`
+
 Otra estructura de código llamada `for()` hace posible correr una de código más de una vez. Esto permite condensar una repetición en pocas líneas. 
 
 El siguiente ejemplo dibuja un patrón 
@@ -104,7 +176,7 @@ line(i, 40, i + 60, 80);
 }
 ```
 
-Las llaves, es decir { y }, distinguen a `for()` (también a `while()`). El código que se encuentra entre llaves se llama bloque. Este es el código que va a ser repetido en cada iteración del *loop* `for()`. 
+Las llaves, es decir { y }, distinguen a `for()`. El código que se encuentra entre llaves se llama bloque. Este es el código que va a ser repetido en cada iteración del *loop* `for()`. 
 
 Dentro de los paréntesis hay tres declaraciones separadas por punto y coma. De izquierda a derecha, estas declaraciones son: *init, test* y *update*
 
