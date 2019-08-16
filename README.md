@@ -45,11 +45,11 @@ Salón B 503
 
 - Lecturas: Pendientes 10%
 
-- Primer parcial: participación 5% y ejercicio a entregar 20%
+- Primer parcial: participación 5% y ejercicio a entregar 20% - 17 al 23 de septiembre 
 
-- Segundo parcial: participación 5% y ejercicio a entregar 20%
+- Segundo parcial: participación 5% y ejercicio a entregar 20% - 28 de octubre al 4 de noviembre
 
-- Tercer parcial: participación 5% y ejercicio a entregar 10%
+- Tercer parcial: participación 5% y ejercicio a entregar 10% 
 
 ## Enlaces y lecturas sugeridas
 

@@ -3,9 +3,23 @@
 
 Presentación.
 
-Fechas, recursos e información -> [https://github.com/EmilioOcelotl/centro20-I_CC3/README.md](https://github.com/EmilioOcelotl/centro20-I_CC3/README.md)
+Fechas, recursos e información -> [https://github.com/EmilioOcelotl/centro20-I_CC3](https://github.com/EmilioOcelotl/centro20-I_CC3)
+
+¿Cómo funciona este documento? 
 
 [Type and Form sculpture](https://devart.withgoogle.com/#/catalogued/6682104213536768)
+
+## Ejemplos de proyectos creativos cuyo fundamento es la programación
+
+Seguimiento de hashtags. Ejercicios que las personas suben a las redes. No necesariamente son los grandes artistas. 
+
+[Zack Lieberman](https://www.instagram.com/zach.lieberman/)
+
+[Algorave 100 fragments - Atsushi Tadoroko](https://vimeo.com/286688569)
+
+[Circulo & Meio - Renick Bell & Joana Chicau](https://www.youtube.com/watch?v=bFqYRpUbKqs)
+
+[Hydra Patterns](https://twitter.com/hydra_patterns)
 
 ## Evaluación
 
@@ -26,6 +40,16 @@ Las posibilidades de las funciones está en la modularidad. Son unidades de soft
 Más adelante aprenderemos a escribir funciones para extender las capacidades de Processing más allá de sus características incorporadas. 
 
 Imprimir en la consola. 
+
+### Sistema de coordenadas
+
+Recordemos que la pantalla de una computadora es una cuadrícula de elementos que emiten luz llamados pixeles.
+
+Escribimos las coordenadas de un pixel de la siguiente manera: (x, y)
+
+Si invocamos una pantalla de 200x200 pixeles, la esquina superior izquierda es el origen, o sea (0, 0) y la esquina inferior derecha es (199, 199)
+
+¿En este ejemplo, qué coordenadas tendría el centro? 
 
 ### Formas
 
@@ -360,9 +384,93 @@ ellipse(x, y, diameter, diameter);
 }
 ```
 
-## Transformaciones (pushMatrix(), popMatrix(), rotate())
+## Transformaciones 
+
+### translate(), rotate() y scale()
+
+La función translate sirve para cambiar el sistema de coordenadas, por default (0, 0) a una localización diferente. 
+
+
+```java
+void setup() {
+size(120, 120);
+}
+void draw() {
+translate(mouseX, mouseY);
+rect(0, 0, 30, 30);
+}
+```
+
+Para el caso del ejemplo anterior, el sistema de coordenadas cambia de (0, 0) a la posición del mouse. cada vez que draw() dibuja algo, rect() se dibuja en el nuevo origen
+
+La función rotate() rota el sistema de coordenadas. Tiene un solo parámetro, que es el ángulo (en radianes) de rotación. Su rotación es relativa a (0, 0), es decir, rota alrrededor del origen. 
+
+```java
+void setup() {
+size(120, 120);
+}
+void draw() {
+rotate(mouseX / 100.0);
+rect(40, 30, 160, 20);
+}
+```
+
+La transformación `scale()` cambia el tamaño de la figura seleccionada. 
+
+
+
+```java
+void setup() {
+size(120, 120);
+}
+
+void draw() {
+translate(mouseX, mouseY);
+scale(mouseX / 60.0);
+rect(-15, -15, 30, 30);
+}
+```
+
+
+### `pushMatrix() y popMatrix()`
+
+Para aislar los efectos de una transformación de forma tal que no afecten a otros comandos, usamos las funciones `pushMatrix()` y `popMatrix()`
+
+Cuando `pushMatrix()` está corriendo, salva una copia del sistema de coordenadas que está en ejecución y reanuda ese sistema después de `popMatrix()`; 
+
+Esto es útil cuando requerimos hacer transformaciones para una figura, pero no queremos que tenga consecuencias para otras. 
+
+```java
+void setup() {
+size(120, 120);
+}
+void draw() {
+pushMatrix();
+translate(mouseX, mouseY);
+rect(0, 0, 30, 30);
+popMatrix();
+translate(35, 10);
+rect(0, 0, 15, 15);
+}
+```
+
+Para rotar una figura en su propio eje: 
+
+```java
+void setup() {
+size(120, 120);
+}
+void draw() {
+rotate(mouseX / 100.0);
+rect(40, 30, 160, 20);
+}
+```
 
 ## Referencias 
 
 [Processing Reference](https://processing.org/reference/)
+
+- Reas, C., & Fry, B. (2014). Processing: a programming handbook for visual designers and artists. Massachusetts: MIT Press.
+
+- Reas, C., McWilliams, C., & LUST. (2010). Form + Code: in design, art and architecture. New York:Princeton Architectural Press.
 
