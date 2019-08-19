@@ -7,9 +7,9 @@ Salón B 503
 
 ## Fechas
 
-- [ ] [16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1. Repaso
+- [x] [16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1. Repaso
 
-- [ ] 23 de agosto - Clase 2. Repaso
+- [ ] [23 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190823/README.md) - Clase 2. Repaso
 
 - [ ] 30 de agosto - Clase 3. Introducción a programación orientada a objetos
 
