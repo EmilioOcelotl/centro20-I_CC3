@@ -93,8 +93,7 @@ ellipse(228, -16, 200, 200);
 27fill(0, 0, 255, 160);
 ellipse(268, 118, 200, 200);
 ```
-
-Hay otras formas de definir el color. Más adelante las abordaremos. 
+Otras formas de definir el color. 
 
 ## Aleatoriedad
 
