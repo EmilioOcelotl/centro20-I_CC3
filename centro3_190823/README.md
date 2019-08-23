@@ -1,7 +1,15 @@
 
 # Clase 2 | Repaso (continuación) 
 
-La clase pasada revisamos *loops*. Repasamos el comportamiento del *loop for*. 
+¿De qué hablamos la clase pasada? 
+
+Zach Lieberman y la evolución de sus sketches. 
+
+Nadar y la visión computarizada. 
+
+Usos estéticos y prácticos de la imagen sintetizada y analizada. 
+
+La clase pasada nos quedamos en *loops*. Repasamos el comportamiento del *loop for*. 
 
 ## Loops
 
@@ -183,8 +191,21 @@ rect(40, 30, 160, 20);
 }
 ```
 
-La transformación `scale()` cambia el tamaño de la figura seleccionada. 
+Es posible utilizar una función para convertir grados sexagesimales a radianes: radians(). Esta función toma el ángulo en grados y los cambia a su valor equivalente en radianes. 
 
+Para usar las medidas en grados y no en radianes.
+
+```java
+void setup() {                                                                                                                                                                                
+size(520, 520);                                                                                                                                                                               
+}                                                                                                                                                                                             
+void draw() {                                                                                                                                                                                 
+rotate(radians(mouseX % 360));                                                                                                                                                                
+rect(140, 130, 160, 20);                                                                                                                                                                      
+} 
+```
+
+La transformación `scale()` cambia el tamaño de la figura seleccionada. Debido a que las coordenadas expanden o contraen en la medida que la escala cambia, todo lo que se dibuja en la ventana aumenta o disminuye proporcionalmente. Usamos scale(1.5) para aumentar todo a 150% de su tamaño original. 
 
 
 ```java
@@ -234,12 +255,61 @@ rect(40, 30, 160, 20);
 }
 ```
 
-## Otras funciones 
+### Operadores aritméticos
 
-### mouseX y mouseY 
+En términos de código, símbolos como +, - y * son operadores. Cuando aparecen entre dos valores, crean una expresión. 
 
-## Ejercicios para la próxima clase. 
+Por ejemplo 5 + 9 y 1024 - 512 son ambas experesiones. 
 
+Los operadores para realizar operaciones matemáticas básicas son: 
+
+| Símbolo | Operación        |
+|:-------:|:----------------:|
+| +       | Suma             | 
+| -       | Resta            |
+| *       | Multiplicación   |
+| /       | División         |
+| =       | Igual a          |
+
+Processing tiene una serie de reglas para definir que operadores tienen preferencia. Esto quiere decir que algunos cálculos se hacen primero, luego otros y luego otros. 
+
+Estas reglas definen el orden de declaración del código cuando se ejecuta. 
+
+Ejemplo:
+
+```java
+int x = 4 + 4 * 5; 
+```
+
+En este caso la operación 4 * 5 se evalúa primero debido a que la multiplicación tiene la prioridad más alta. Posteriormente, al producto de 4 * 5 se le agrega 4. 
+
+Para forzar el orden de las operaciones se utilizan los paréntesis. Todo lo que está entre paréntesis se calcula primero. 
+
+|
+```java
+int x = (4 + 4) * 5; 
+```
+
+Otros tipos de operaciones que son convenciones para ahorrar escritura: 
+
+```java
+x += 10; // es igual a x = x +10 
+```
+
+```java
+x ++; // es igual a x = x + 1 
+```
+## Ejercicios
+
+Dibujar un personaje a partir de funciones básicas de dibujo. 
+
+Aprovechar las opciones de color RGB y transparencias. 
+
+Hacer pruebas para agregar algún tipo de interacción utilizando condicionales y la posición/estado del mouse. 
+
+Idealmente: *loop for* 
+
+No usar el modo estático: el sketch debe ser dinámico. 
 
 ## Referencias 
 
