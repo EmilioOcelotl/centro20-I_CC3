@@ -8,9 +8,9 @@ La sintaxis y la forma física de la presentación de información ha sido la pr
 
 La programación orientada a objetos, inicio en 1960 con el lenguaje de programación Simula desarrollado por Ole-Johan Dahl y Kristen Nygaard.
 
-En este paradigma, los objetos son los elementos básicos de su ontología. El software se estructura como una colección de objetos que trabajan juntos. 
+En este paradigma, los objetos son los elementos básicos. El software se estructura como una colección de objetos que trabajan juntos. 
 
-El núcleo del paradigma de la programación orientada a objetos hace referencia al hecho de que los objetos actuan unos sobre los otros a través del envío de mensajes. 
+El núcleo del paradigma de la programación orientada a objetos hace referencia al hecho de que los objetos actúan unos sobre los otros a través del envío de mensajes. 
 
 La diferencia entre la programación orientada a objetos y otros paradigmas de programación es que en la primera, los datos y las operaciones que manipulan estos datos se encuentran en un mismo objeto, en vez de estar separados. 
 
@@ -18,7 +18,7 @@ La POO se diferencia de la programación procedural, cuyo comportamiento está d
 
 En POO, estos comportamientos están contenidos en los métodos de los objetos. 
 
-Un método es una propiedad básica de una case de objeto, está oculto en el objeto mismo. 
+Un método es una propiedad básica de una case de objeto. Los métodos de los objetos están ocultos en el objeto mismo. 
 
 Los métodos pueden ser invocados al enviar un mensaje adecuado al objeto. 
 
@@ -60,6 +60,8 @@ Atributos: Volumen, frecuencia, banda(AM y FM), encendido/apagado
 
 Métodos: establecerVolumen, establecerFrecuencia, establecerBanda
 
+Siguiendo con esta analogía ¿Cuáles serían los atributos del objeto automóvil? 
+
 ## Método y atributo vs variable y función
 
 A las variables dentro de un objeto se les llama atributos y a las funciones dentro de un objeto se les llama métodos. En este sentido, un objeto combina datos relacionados (atributos) con acciones y comportamientos relacionados (métodos). 
@@ -98,30 +100,93 @@ Un objeto es la clase String que veremos a continuación.
 
 Un string es una cadena de caracteres, esto es, una secuencia ordenada y finita de elementos que pertenecen a un cierto tipo de lenguaje formal o alfabeto. 
 
+Así como las variables pueden almacenar números de punto flotante o enteros como tipos de datos, las cadenas de caracteres y los caracteres también son un tipo de dato que Processing puede utilizar. 
+
+En Processing los caracteres siempre se definen dentro de comas simples `'a'` mientras que las cadenas de caracteres se definen dentro de comas dobles `"cadena"`
+
+El ejemplo siguiente muestra cómo funciona `string` y cómo una colección de caracteres se puede convertir en una cadena. 
+
+```java 
+String str1 = "cadena";
+char data[] = {'c', 'a', 'd', 'e', 'n', 'a'};
+String str2 = new String(data);
+println(str1);  // Imprime cadena en la consola
+println(str2);  // Imprime cadena en la consola
+```
+
 String en Processing como un tipo de dato incluye métodos para examinar caracteres individuales en una cadena, extraer partes de la cadena, convertir la cadena de alguna forma (por ejemplo cambiar todos los caracteres a mayúsculas) e incluso comparar dos variables de cadena. 
 
+Métodos que puede recibir string. 
+
 ```java
-//Ejemplo 1.0 String
-//Declara la variable PFont
-PFont f; 
+String ejemplo = "Metodos de una cadena"; // primero declaramos la cadena
 
-void setup() {
-  size(640, 480);
+println(ejemplo.charAt(2)); // para buscar caracteres en un índice específico
 
-  // La función createFont invoca una fuente
-  // Sintaxis (nombre tipografía, tamaño);
-  f = createFont("Arial", 16);
-  background(255);
+if(ejemplo.equals("metodos de una cadena de caracteres")){
+  println("Sí, los valores son los mismos");
+}
+else{
+  println("No, los valores no son los mismos");
+}
 
-} 
+// Imprime el índice de la primera vez que aparece un caracter específico. 
 
-void draw() {
-   
-  textFont(f, 16); // Especifica la fuente a usar
-  fill(0);         // Especifica el color de la fuente
+println(ejemplo.indexOf('d')); 
 
-  // Texto dibujado 
-  // Sintaxis ("texto", posx, posy)
-  text("Prueba de strings :B ", mouseX, mouseY);
+// Número de elementos de la cadena
+
+println(ejemplo.length()); 
+
+// regresa un substring que es parte del string original, 
+// pero que está delimitado por un indice inicial y uno final
+
+println(ejemplo.substring(4, 12)); 
+
+// minúsculas
+
+println(ejemplo.toLowerCase());
+
+// mayúsculas
+
+println(ejemplo.toUpperCase());
+```
+
+Hasta el momento hemos partido del objeto String para explicar como Processing se aproxima al paradigma de la POO. 
+
+Independientemente de esto y de las implicaciones de que el objeto String cumpla con las características de método y atributo que la relacionan con el paradigma de la POO, hay funciones en Processing que interactúan con string y que pueden darle aplicaciones interesantes a los programas que de alguna manera interactúan con cadenas de caracteres. 
+
+```java
+String s = "Próxima sesión: extructura y sintáxis de una clase.";
+fill(50);
+text(s, 10, 10, 70, 120);
+
+// en este caso estamos determinando: 
+
+// cadena de caracteres
+// posicion en X y Y del cuadro que despliega el texto
+// ancho y alto del cuadro que determina el texto
+
+// text(str, x1, y1, x2, y2); 
+```
+
+Para cargar archivos que pueden ser números, letras, palabras, cualquier cosa que sea representable como texto pero esta vez, en un archivo txt
+
+```java
+String[] lines = loadStrings("numbers.txt");
+for (int i = 0; i < lines.length; i++) {
+println(lines[i]);
 }
 ```
+
+split
+
+```java
+String s = "a, b";
+String[] p = split(s, ", ");
+println(p[0]); 
+println(p[1]);
+```
+
+### Ejemplo ofhawc
+

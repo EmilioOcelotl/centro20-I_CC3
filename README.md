@@ -1,4 +1,3 @@
-}
 # Código Creativo 2020-I Tercer Semestre
 
 ![portada](https://github.com/EmilioOcelotl/centro20-I_CC3/blob/master/img/portada3.png)
