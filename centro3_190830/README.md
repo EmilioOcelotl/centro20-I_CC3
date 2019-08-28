@@ -1,5 +1,7 @@
 # Clase 3. Introducción a programación orientada a objetos 
 
+Ejemplo ofhawc
+
 ## Paradigmas de la programación orientada a objetos
 
 En el siglo XX, el procesamiento de datos han conformado la base de las ciencias de la computación como disciplina. 
@@ -187,6 +189,3 @@ String[] p = split(s, ", ");
 println(p[0]); 
 println(p[1]);
 ```
-
-### Ejemplo ofhawc
-
