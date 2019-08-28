@@ -1,19 +1,17 @@
-
+}
 # Código Creativo 2020-I Tercer Semestre
 
 ![portada](https://github.com/EmilioOcelotl/centro20-I_CC3/blob/master/img/portada3.png)
 
 Objetivo del curso: Aplicar procesos algorítmicos para la conceptualización y realización de productos digitales de diseño y arte mediante programación orientada a objetos.
 
-Salón B 503
-
 ## Fechas
 
 - [x] [16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1. Repaso
 
-- [ ] [23 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190823/README.md) - Clase 2. Repaso
+- [x] [23 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190823/README.md) - Clase 2. Repaso
 
-- [ ] 30 de agosto - Clase 3. Introducción a programación orientada a objetos
+- [ ] [30 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190830/README.md) - Clase 3. Introducción a programación orientada a objetos
 
 - [ ] 6 de septiembre - Clase 4. Programación orientada a objetos
 
