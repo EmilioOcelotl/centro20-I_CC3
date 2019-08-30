@@ -2,21 +2,25 @@
 
 Ejemplo ofhawc
 
+Iniciar con String 
+
+Para la próxima clase revisar detenidamente las diferencias entre funciones y objetos. 
+
 ## Paradigmas de la programación orientada a objetos
 
 En el siglo XX, el procesamiento de datos han conformado la base de las ciencias de la computación como disciplina. 
 
 La sintaxis y la forma física de la presentación de información ha sido la prioridad en este campo. 
 
-La programación orientada a objetos, inicio en 1960 con el lenguaje de programación Simula desarrollado por Ole-Johan Dahl y Kristen Nygaard.
+La programación orientada a objetos inició en 1960 con el lenguaje de programación Simula desarrollado por Ole-Johan Dahl y Kristen Nygaard.
 
 En este paradigma, los objetos son los elementos básicos. El software se estructura como una colección de objetos que trabajan juntos. 
 
-El núcleo del paradigma de la programación orientada a objetos hace referencia al hecho de que los objetos actúan unos sobre los otros a través del envío de mensajes. 
+El núcleo del paradigma de la programación orientada a objetos: objetos actúan unos sobre los otros a través del envío de mensajes. 
 
-La diferencia entre la programación orientada a objetos y otros paradigmas de programación es que en la primera, los datos y las operaciones que manipulan estos datos se encuentran en un mismo objeto, en vez de estar separados. 
+La diferencia entre la programación orientada a objetos y otros paradigmas de programación: en la primera, los datos y las operaciones que manipulan estos datos se encuentran en un mismo objeto, en vez de estar separados. 
 
-La POO se diferencia de la programación procedural, cuyo comportamiento está definido por procedimientos, funciones y subrutinas. 
+La POO se diferencia de la programación procedimental, cuyo comportamiento está definido por procedimientos, funciones y subrutinas. 
 
 En POO, estos comportamientos están contenidos en los métodos de los objetos. 
 
@@ -30,31 +34,39 @@ Variables y funciones son bloques que sirven para construir software. Con frecue
 
 La programación orientada a objetos fue desarrollada para hacer este proceso más explícito: usa objetos y clases como bloques para construir software. 
 
-Una clase define un grupo de métodos (funciones) y campos (variables). Un objeto es una instancia simple de una clase. 
+Una clase define un grupo de métodos (funciones) y atributos o campos (variables). Un objeto es una instancia simple de una clase. 
 
-Los campos dentro de los objetos son accesibles por lo general vía sus propios métodos. Esto permite al objeto "ocultar" su complejidad de otras partes del programa. 
+Los atributos o campos dentro de los objetos son accesibles por lo general vía sus propios métodos. Esto permite al objeto "ocultar" su complejidad.  
 
 Además de proporcionar un modelo conceptual útil, la programación orientada a objetos se convierte en una necesidad cuando un programa incluye muchos elementos o cuando crece en contenido. 
 
-Los objetos pueden proveer un poderoso medio de pensar y estructurar ideas en el código. 
+Los objetos pueden proveer un poderoso medio de pensar y estructurar ideas en el código. Esto también facilita la lectura y procesamiento de datos. 
 
 Todo el software escrito en Processing consiste en objetos, pero este hecho se omite, de forma tal que los conceptos de la programación orientada a objetos pueda ser introducida después. 
 
 ### Programación orientada a objetos
 
-Un programa modular está compuesto por módulos de código los cuales realizan una tarea específica. 
+Un programa modular está compuesto por módulos de código. Cada módulo realiza una tarea específica. 
 
-Las variables son el camino más básico para pensar en el uso de elementos dentro de un programa. Permiten a un solo valor aparecer muchas veces a lo largo del código. También permiten que ese mismo valor pueda cambiar fácilmente. 
+Podemos pensar en las variables como el elemento básico para manipular elementos dentro de un programa. Permiten a un solo valor aparecer muchas veces a lo largo del código. También permiten que ese mismo valor pueda cambiar fácilmente. 
 
-De manera similar, las funciones abstraen una posible tarea y permiten usar bloques de código en todo el programa escrito. 
+Hasta el momento, hemos visto variables que pueden almacenar números o estados booleanos. En algunas ocasiones también hemos visto texto que aparece entre comillas ¿String? 
 
-Típicamente nos preocupamos solamente por lo que la función hace, no por cómo funciona. Esto puede ser problemático: el caso de los automóviles, la computadora y la cajanegrización. 
+De manera similar a las variables, las funciones abstraen una posible tarea y permiten usar bloques de código en todo el programa escrito. 
 
-Sin embargo, esto permite que nos enfoquemos en los objetivos del programa y no tanto en la complejidad de su infraestructura. 
+Entonces, nuestro programa puede ser una relación entre tipos de datos que se pueden expresar en variables y funciones que manipulan estos datos.
+
+Típicamente nos preocupamos solamente por lo que la función hace, no por cómo funciona. Esto puede ser problemático: el caso de los automóviles, la computadora, el teléfono. 
+
+¿Estos dispositivos son cajas negras? 
+
+Tipos de cajas negras: registrador de vuelo pero también pueden ser elementos que podemos estudiar en función de las entradas que recibe y las salidas que produce, sin tener noción de cómo funcionan. 
+
+Cuando ciertas cosas del funcionamiento de los objetos permanecen ocultas, nos podemos enfocar en los objetivos del programa y no tanto en la complejidad de su infraestructura. 
 
 ## Ejemplo en lenguaje natural
 
-Es posible establecer una analogía entre un objeto en software y artefacto del mundo real. 
+Es posible establecer una analogía entre un objeto en software y artefactos del mundo real. 
 
 Estas analogías nos ayudarán a entender la forma de pensar del mundo de la programación orientada a objetos. 
 
@@ -62,13 +74,17 @@ Atributos: Volumen, frecuencia, banda(AM y FM), encendido/apagado
 
 Métodos: establecerVolumen, establecerFrecuencia, establecerBanda
 
-Siguiendo con esta analogía ¿Cuáles serían los atributos del objeto automóvil? 
+Siguiendo con esta analogía ¿Cuáles serían los atributos y métodos del objeto automóvil? 
 
-## Método y atributo vs variable y función
+## Método y atributo vs función y variable
 
-A las variables dentro de un objeto se les llama atributos y a las funciones dentro de un objeto se les llama métodos. En este sentido, un objeto combina datos relacionados (atributos) con acciones y comportamientos relacionados (métodos). 
+A las variables dentro de un objeto se les llama atributos y a las funciones dentro de un objeto se les llama métodos. 
 
-Métodos y atributos funcionan exactamente como las variables y las funciones de lo que hasta el momento hemos visto en Processing, pero utilizaremos estos nuevos términos para enfatizar que son parte de un objeto. 
+En este sentido, un objeto combina datos relacionados (atributos) con acciones y comportamientos relacionados (métodos). 
+
+En Processing, Métodos y atributos funcionan exactamente como variables y funciones hasta el momento vistas. 
+
+Utilizaremos estos nuevos términos para enfatizar que son parte de un objeto. 
 
 Es posible acceder a los métodos y atributos a través del punto (que funge como operador), un periodo establecido entre el nombre del objeto y el nombre de la función dentro del objeto. 
 
