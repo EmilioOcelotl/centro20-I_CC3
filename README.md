@@ -10,9 +10,9 @@ Objetivo del curso: Aplicar procesos algorítmicos para la conceptualización y 
 
 - [x] [Semana 19 - 23 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190823/README.md) - Clase 2. Repaso
 
-- [ ] [Semana 26 - 30 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190830/README.md) - Clase 3. Introducción a programación orientada a objetos
+- [x] [Semana 26 - 30 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190830/README.md) - Clase 3. Introducción a programación orientada a objetos
 
-- [ ] Semana 2 - 6 de septiembre - Clase 4. Programación orientada a objetos
+- [ ] [Semana 2 - 6 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190906/README.md) - Clase 4. Programación orientada a objetos
 
 - [ ] Semana 9 - 13 de septiembre - Clase 5. Práctica de programación orientada a objetos
 
