@@ -127,6 +127,28 @@ Tomar el ejemplo que hasta el momento hemos construido, variar formas, tamaños,
 
 ## Estructura y sintaxis de una clase
 
+Hasta el momento hemos abordado tres nociones: objeto, método y atributo. 
+
+Vamos a agregar un concepto más: clase
+
+Una clase define un grupo de métodos (funciones) y campos/atributos. Si bien podría parecer que un objeto y una clase son similares, tienen diferencias. 
+
+Estas diferencias tienen que ver con la manera en la que se estructuran comportamientos y atributos en la POO. 
+
+Importante: Un objeto es una instancia simple de una clase. 
+
+Entonces, podemos complejizar el ejercicio de la analogía entre objeto, método y atributo.
+
+Por ejemplo clase radio, con el atributo radio frecuencia y el método asignar frecuencia. 
+
+Una instancia de esa clase, es decir un objeto, podría ser radio FM (87.5 -108 Mhz) y radio de onda corta (3 -30 Mhz) 
+
+Otro atributo podría ser el color de la radio, no solamente la radio frecuencia
+
+
+## Ejemplo de cómo se usa una clase y ejercicio de hacer una clase
+
+
 Cuando definimos una clase creamos nuestro propio tipo de tipos de datos. 
 
 Ya hemos visto que existen tipos de formas de almacenar datos en Processing como: int, float y boolean. 
@@ -134,8 +156,6 @@ Ya hemos visto que existen tipos de formas de almacenar datos en Processing como
 La clase pasada hablamos un poco de objetos y revisamos String, una clase para empezar a trabajar con series de caracteres. 
 
 Definir una clase es parecido a este último tipo de datos: es posible almacenar variables y métodos dentro de un mismo nombre. 
-
-## Ejemplo de cómo se usa una clase y ejercicio de hacer una clase
 
 Para crear una clase primero debemos tener claro que queremos que haga el código. 
 
@@ -167,3 +187,16 @@ Entonces, traduzcamos el programa que hicimos a la forma de estructurar el códi
 
 ¿Qué pasa? 
 
+Es importante señalar varias cosas: 
+
+La primera es que la clase Circulo no es muy útil hasta el momento, sin embargo es el inicio para ver de qué manera podemos introducir lo que hasta el momento hemos visto. 
+
+Es importante señalar que la clase Circulo y el objeto cir son cosas diferentes. 
+
+Los objetos son creados a partir de una clase y una clase describe un conjunto de campos/atributos y métodos. 
+
+Una instancia de una clase funciona como una variable y como cualquier variable, debe tener un nombre único. 
+
+Si queremos realizar varias instancias de clase, podemos diferenciarlas entre ellas por medio de la declaración de distintos nombres. 
+
+En la próxima clase complejizaremos y trabajaremos en torno a otras cosas, por ejemplo, constructores. 
