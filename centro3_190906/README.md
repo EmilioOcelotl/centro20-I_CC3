@@ -121,6 +121,28 @@ line(i, 40, i + 60, 80);
 }
 ```
 
+### Relación con la clase String
+
+¿Es posible sustituir la posición de los círculos con texto dibujado en pantalla, leído de un archivo txt?
+
+Los siguientes ejemplos que aparecen en el documento de la clase pasada pueden ayudarnos a resolver este problema. 
+
+```java
+String[] lines = loadStrings("numbers.txt");
+for (int i = 0; i < lines.length; i++) {
+println(lines[i]);
+}
+```
+
+split
+
+```java
+String s = "a, b";
+String[] p = split(s, ", ");
+println(p[0]); 
+println(p[1]);
+```
+
 ### Ejercicio en clase /  tarea
 
 Tomar el ejemplo que hasta el momento hemos construido, variar formas, tamaños, colores y comportamientos. Enviarlos por email con comentarios que expliquen cómo funciona. 
