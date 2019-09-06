@@ -143,6 +143,32 @@ println(p[0]);
 println(p[1]);
 ```
 
+```java
+int paso = 2;
+
+void setup(){
+size(600, 600);
+background(0);
+}
+
+void draw(){
+  background(0);
+  paso = paso + 1;
+  //fill(paso);
+textSize((paso % 30)+1);
+String[] lines = loadStrings("ohplaces.txt");
+
+println(lines[int(random(100))]); 
+
+rectMode(CENTER);  
+
+text(lines[int(random(100))], width/2, height/2, 80, 80);
+text(lines[int(random(100))], width/4, height/4, 80, 80);
+text(lines[int(random(100))], width/4*3, height/4*3, 80, 80);
+
+}
+```
+
 ### Ejercicio en clase /  tarea
 
 Tomar el ejemplo que hasta el momento hemos construido, variar formas, tamaños, colores y comportamientos. Enviarlos por email con comentarios que expliquen cómo funciona. 
