@@ -148,7 +148,9 @@ int paso = 2;
 
 void setup(){
 size(600, 600);
-background(0);
+// background(0);
+String[] lines = loadStrings("ohplaces.txt");
+
 }
 
 void draw(){
@@ -156,11 +158,10 @@ void draw(){
   paso = paso + 1;
   //fill(paso);
 textSize((paso % 30)+1);
-String[] lines = loadStrings("ohplaces.txt");
 
-println(lines[int(random(100))]); 
+// println(lines[int(random(100))]); 
 
-rectMode(CENTER);  
+rectMode(CENTER); // interpreta posX posY como el centro de la figura
 
 text(lines[int(random(100))], width/2, height/2, 80, 80);
 text(lines[int(random(100))], width/4, height/4, 80, 80);
