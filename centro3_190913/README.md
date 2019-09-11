@@ -1,9 +1,7 @@
 
 # Clase 5 | Práctica de programación orientada a objetos
 
-## Ejemplos relevantes de código creativo
-
-## Processing
+## Plan
 
 En esta clase realizaremos un ejercicio parecido al de la clase pasada. 
 
@@ -18,6 +16,60 @@ Finalmente introduciremos algunas ideas sobre las clases en el contexto de la pr
 De esta manera, trataremos de delimitar el control sobre el ejemplo que vamos utilizando. 
 
 ### Arreglos (repaso) 
+
+El término array o arreglo hace referencia al agrupamiento estructurado. En la programación de computadoras, un arreglo es un conjunto de elementos de datos almacenados bajo el mismo nombre. 
+
+Los arreglos pueden ser creados para almacenar cualquier tipo de dato y cada uno de estos elementos pueden ser individualmente asignados y leídos. 
+
+Puede haber arreglos de números, caracteres, strings, valores booleanos etc. 
+
+Los arreglos pueden almacenar datos de vectores de figuras complejas, teclazos recientes del teclado o datos leídos de un archivo. 
+
+Los arreglos pueden ser útiles, por ejemplo, podemos almacenar cinco valores enteros en un solo arreglo de entero más que definir cinco variables separadas. 
+
+Entonces, los arreglos pueden ser útiles para agrupar datos de cualquier tipo. En caso de que estemos usando grandes cantidades de datos, es posible simplicar la tarea de escribir y agrupar datos por medio de arreglos. 
+
+Los elementos de un arreglo se empiezan a contar desde cero. Entonces, el primer elemento está en la posición [0], el segundo en [1] y así sucesivamente. 
+
+Los arreglos se declaran de manera similar a otro tipo de datos y se distinguen por el uso de corchetes: [ y ]. 
+
+Cuando se declara un arreglo, el tipo de dato que almacena debe ser especificado. 
+
+Una vez que el arreglo es creado, sus valores pueden ser asignados. 
+
+A continuación, tres formas de declarar arreglos de números en Processing
+
+```java
+int[] data;
+void setup() {
+size(100, 100);
+data = new int[5];
+data[0] = 19;
+data[1] = 40;
+data[2] = 75;
+data[3] = 76;
+data[4] = 90;
+}
+```
+
+```java
+int[] data = new int[5];
+void setup() {
+size(100, 100);
+data[0] = 19;
+data[1] = 40;
+data[2] = 75;
+data[3] = 76;
+data[4] = 90;
+}
+```
+
+```java
+int[] data = { 19, 40, 75, 76, 90 };
+void setup() {
+size(100, 100);
+}
+```
 
 ### Relación con la clase String
 
@@ -142,10 +194,99 @@ Una instancia de una clase funciona como una variable y como cualquier variable,
 
 Si queremos realizar varias instancias de clase, podemos diferenciarlas entre ellas por medio de la declaración de distintos nombres. 
 
-En la próxima clase complejizaremos y trabajaremos en torno a otras cosas, por ejemplo, constructores. 
+A continuación, el ejemplo que desarrollamos la clase pasada en relación a una clase. 
+
+```java
+Circulo cir; 
+
+void setup() {
+  size(600, 600); 
+  cir = new Circulo();
+  cir.x = width/4; 
+  cir.y = height/4;
+  cir.d = 0;
+}
+
+void draw() {
+  background(0);
+  noStroke(); 
+
+  cir.d = cir.d + 1;
+
+  if (cir.d > 120) {
+    cir.d = cir.d * -1;
+  }
+  
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      int paso = i + 1; 
+      int paso2 = j + 1; 
+      ellipse(cir.x*paso, cir.y*paso2, cir.d, cir.d); 
+    }
+  }
+}
+
+class Circulo {
+  float x, y; 
+  float d;
+}
+```
 
 ### Constructores
 
+Un constructor es un bloque de código que se activa al mismo tiempo de que se crea un objeto. 
+
+Los constructores siempre tienen el mismo nombre que la clase y se usan por l ogeneral para asignar valores a los campos de un objeto al mismo tiempo que se crean. 
+
+Si no hay constructor en una calse, entonces los valores de cada campo númerico se inicializan en cero.
+
+El constructor es igual que otros métodos. La única diferencia que tiene es que no está precedido por la definición de un tipo de tado (int, boolean etc) ni por la palabra void. 
+
+A continuación, la implementación de un constructor en el código que hasta el momento hemos escrito. 
+
+```java
+Circulo cir; 
+
+int x = 10;
+int y = 4; 
+int diaLim = 40;
+
+void setup() {
+  size(600, 600); 
+  cir = new Circulo(x, y, 0);
+}
+
+void draw() {
+  
+  background(0);
+  noStroke(); 
+
+  cir.d = cir.d + 1;
+  
+  if (cir.d > diaLim) {
+    cir.d = cir.d * -1;  
+  }
+  
+  for (int i = 0; i < x -1; i++) {
+    for (int j = 0; j < y -1; j++) {
+      int paso = i + 1; 
+      int paso2 = j + 1; 
+      ellipse(cir.x*paso, cir.y*paso2, cir.d, cir.d); 
+    }
+  }
+}
+
+class Circulo {
+  float x, y, d;
+  
+  Circulo(float xpos, float ypos, float dia){
+    x = width/xpos;
+    y = height/ypos;
+    d = dia; 
+  }
+  
+}
+```
 
 ### Ejercicio en clase /  tarea
 
