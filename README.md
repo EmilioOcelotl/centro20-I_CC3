@@ -6,17 +6,17 @@ Objetivo del curso: Aplicar procesos algorítmicos para la conceptualización y 
 
 ## Fechas
 
-- [x] [Semana 12 - 16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1. Repaso
+- [x] [Semana 12 - 16 de Agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190816/README.md) - Clase 1.
 
-- [x] [Semana 19 - 23 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190823/README.md) - Clase 2. Repaso
+- [x] [Semana 19 - 23 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190823/README.md) - Clase 2.
 
-- [x] [Semana 26 - 30 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190830/README.md) - Clase 3. Introducción a programación orientada a objetos
+- [x] [Semana 26 - 30 de agosto](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190830/README.md) - Clase 3.
 
-- [x] [Semana 2 - 6 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190906/README.md) - Clase 4. Programación orientada a objetos
+- [x] [Semana 2 - 6 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190906/README.md) - Clase 4.
 
-- [ ] [Semana 9 - 13 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190913/README.md) - Clase 5. Práctica de programación orientada a objetos
+- [x] [Semana 9 - 13 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190913/README.md) - Clase 5.
 
-- [ ] Semana 16 - 20 de septiembre - Clase 6. Matrices y vectores
+- [ ] [Semana 16 - 20 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_190920/README.md) - Clase 6. 
 
 - [ ] Semana 23 - 27 de septiembre - Clase 7. Matrices y vectores
 
