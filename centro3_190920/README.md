@@ -1,12 +1,14 @@
 # Clase 6
 
+
 ## Objetivos
+
 
 La clase se dividirá en dos partes: La primera será una revisión rápida del funcionamiento de las clases y constructores. La segunda parte consistirá en ejercicios prácticos para aclarar dudas de cara a la entrega de la siguiente semana. 
 
-## Ejemplos
 
 ## Clases y constructores (por fin) 
+
 
 ### Estructura y sintaxis de una clase
 
@@ -176,16 +178,106 @@ class Circulo {
 }
 ```
 
-Entonces, si quisieramos introducir las funcionalidades de los textos que implementamos con String, podríamos definir distinos objetos con distintas características:
+También podemos utilizar métodos dentro de la misma clase que nos puedan ayudar a resolver ciertas tareas.
 
-Por ejemplo que un objeto leyera un tercio del texto, otro otro tercio y un último el tercio restante. 
+El siguiente código utiliza lo que hemos visto hasta el momento y lo traslada al interior de la clase.
 
-### Ejercicio en clase /  tarea
+```java
+// Paso 1: declarar el objeto
+// Importante señalar que este objeto está en relación con el último bloque de código que es la declaración de la clase
+// Una clase es la definición de un tipo de objeto
+// Un objeto es la realización o la instancia de una calse
 
-Tomar el ejemplo que hasta el momento hemos construido, variar formas, tamaños, colores y comportamientos. Enviarlos por email con comentarios que expliquen cómo funciona. 
+Circulos cir; 
 
+void setup() {
+  size(600, 600); 
+  
+  // Construir el Objeto
+  // Cantidad de Círculos en X, Cantidad de Círculos en Y, Límite del diámetro; 
 
-## Ejercicios en clase
+  cir = new Circulos(2, 8, 200); 
+}
+
+void draw() {
+
+  background(0);
+  noStroke(); 
+
+  // Para dibujar nuestros círculos
+  // El método dibujarCirculos dibujará el arreglo con las características determinadas arriba
+  
+  cir.dibujarCirculos(); 
+  
+  // Nuestro objeto tiene otro método: imprimirValores
+
+  cir.imprimirValores(); 
+
+}
+
+// Aquí es donde escribimos la clase
+
+class Circulos {
+  
+  // Lo primero es determinar qué valores influyen en nuestra clase:
+  // cantidad de cículos en x, cantidad de círculos en y, diámetro y límite del diámetro
+  // Los cuatro valores son números de punto flotante, entonces pueden declararse todos a la vez
+  
+  float x, y, d, dLim;
+  
+  // Luego viene el constructor
+  // El constructor es una especie de puente de comunicación entre el funcionamiento de la clase
+  // y las características delimitadas al inicio del programa o trasformados a lo largo del mismo
+  // En este caso, el constructor de la clase Círculos tiene 3 parámetros
+  // Omitimos el valor del díametro ya que este cambia dinámicamente y está delimitado por diaLim
+
+  Circulos(float xpos, float ypos, float diaLim) {
+
+    // Tenemos que igualar los valores del constructor a las variables que declaramos arriba
+    
+    x = xpos;
+    y = ypos;
+    dLim = diaLim;
+    
+  }
+
+  // Posteriormente declaramos el primer método que dibuja los círculos con un comportamiento dado
+
+  void dibujarCirculos() {
+ 
+    // utilizamos las variables declaradas al inicio de la clase
+    
+    d = d + 1;
+
+    if (d > dLim) {
+      d = d * -1;
+    }
+
+    // estas partes del código ya las habíamos dibujado anteriormente
+    // Para este caso, lo que estamos haciendo es sustituir en algunos casos nombres de variables anteriormente designadas
+    // Por los nombres de las variables que declaramos en la clase
+    
+    for (int i = 0; i < x; i++) {
+      for (int j = 0; j < y; j++) {
+        ellipse((width/(x+1))*(i+1), (height/(y+1))*(j+1), d, d);
+      }
+    }
+    
+  }
+  
+  // Podemos tener los métodos que queramos
+  // En este caso, el metodo imprime valores imprimirá una cadena de caracteres que arrojará información sobre
+  // el comportamiento del programa. 
+  // al final, cuando invocamos el método imprimir valores, realmente estamos haciendo uso de un código "empaquetado"
+  
+  void imprimirValores (){
+      println("Círculos en X: " + x + ", Cículos en Y: " + y + ", Círculos totales: " + (x * y) + ", Valor del diámetro: " + abs(d));
+  }
+  
+}
+```
+
+## Ejercicios en clase para la primera entrega
 
 
 - Debe tener setup() y draw().
