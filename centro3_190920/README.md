@@ -1,14 +1,10 @@
 # Clase 6
 
-
 ## Objetivos
-
 
 La clase se dividirá en dos partes: La primera será una revisión rápida del funcionamiento de las clases y constructores. La segunda parte consistirá en ejercicios prácticos para aclarar dudas de cara a la entrega de la siguiente semana. 
 
-
 ## Clases y constructores (por fin) 
-
 
 ### Estructura y sintaxis de una clase
 
@@ -30,27 +26,23 @@ Una instancia de esa clase, es decir un objeto, podría ser radio FM (87.5 -108 
 
 Otro atributo podría ser el color de la radio, no solamente la radio frecuencia
 
-
 ### Ejemplo de cómo se usa una clase y ejercicio de hacer una clase
-
 
 Cuando definimos una clase creamos nuestro propio tipo de tipos de datos. 
 
 Ya hemos visto que existen tipos de formas de almacenar datos en Processing como: int, float y boolean. 
 
-La clase pasada hablamos un poco de objetos y revisamos String, una clase para empezar a trabajar con series de caracteres. 
+En ocasiones hablamos un poco de objetos y revisamos String, una clase para empezar a trabajar con series de caracteres. 
 
 Definir una clase es parecido a este último tipo de datos: es posible almacenar variables y métodos dentro de un mismo nombre. 
 
-Para crear una clase primero debemos tener claro que queremos que haga el código. 
+Para crear una clase primero debemos tener claro qué queremos que haga el código. 
 
-En este sentido es común que primero hagamos la lista de variables que requeriremos (estos serán los campos o atributos). 
-
-Tener en cuenta las variables que utilizaremos nos ayudará a darnos cuenta de qué tipo serán. 
+En este sentido, es común que primero hagamos la lista de variables que requeriremos (estos serán los campos o atributos). 
 
 El nombre de una clase es importante: Los nombres de las clases siguen las mismas convenciones que las variables (¿Cuáles?). 
 
-Sin embargo, los nombres de las clases siempre deben ir en mayúsculas. 
+Los nombres de las clases siempre deben ir en mayúsculas. 
 
 Ya hemos visto un poco de esto con String, esto ayuda a que podamos distinguir a partes del código como String o PImage de los tipos de funciones que se escriben con minúsculas como int o boolean. 
 
@@ -65,7 +57,6 @@ float y - coordenadas del círculo en y
 float diameter - diametro del círculo
 
 Una vez que los atributos y el nombre de la clase han sido determinados, hay que considerar cómo el programa se comportará sin el uso de un objeto. 
-
 Para el caso del ejemplo que hemos utilizado, algunos parámetros están definidos en variables, básicamente posición del círculo y diámetro. 
 
 Entonces, traduzcamos el programa que hicimos a la forma de estructurar el código que hemos mencionado hasta el momento
@@ -126,9 +117,9 @@ class Circulo {
 
 Un constructor es un bloque de código que se activa al mismo tiempo de que se crea un objeto. 
 
-Los constructores siempre tienen el mismo nombre que la clase y se usan por l ogeneral para asignar valores a los campos de un objeto al mismo tiempo que se crean. 
+Los constructores siempre tienen el mismo nombre que la clase y se usan por lo general para asignar valores a los campos de un objeto al mismo tiempo que se crean. 
 
-Si no hay constructor en una calse, entonces los valores de cada campo númerico se inicializan en cero.
+Si no hay constructor en una clase, entonces los valores de cada campo númerico se inicializan en cero.
 
 El constructor es igual que otros métodos. La única diferencia que tiene es que no está precedido por la definición de un tipo de tado (int, boolean etc) ni por la palabra void. 
 
@@ -279,7 +270,6 @@ class Circulos {
 
 ## Ejercicios en clase para la primera entrega
 
-
 - Debe tener setup() y draw().
 
 - Debe hacer uso de la condicional if(), por lo menos en su versión más básica.
@@ -297,7 +287,3 @@ Adicionalmente, el ejercicio puede contar con:
 - El uso de arreglos de datos de cualquier tipo, idealmente, de strings para complementar el punto anterior.
 
 - Utilizar las formas más complejas de la condicional if/else.
-
-- La próxima clase estará dividida en dos partes: La primera consistirá en una introducción a la programación de clases y constructores, la segunda implicará tiempo de trabajo para complementar el avance de sus ejercicios y resolver dudas específicas.
-
-A continuación algunas muestras de código que pueden ser de utilidad para la realización del ejercicio
