@@ -185,9 +185,9 @@ for (int x = 0; x < width; x++) {
   for (int y = 0; y < height; y++) {
     // Con esta operación encontramos la posición de los pixeles en el contexto de una dimensión 
     int loc = x + y * width;
-    if (x % 10 == 0) { // If we are an even column
+    if (x % 10 == 0) { // Se colorea de blanco cada 10 columnas de pixeles
       pixels[loc] = color(255);
-    } else {          // If we are an odd column
+    } else {          // De lo contrario cambia el color en un gradiente en escala de grises
       pixels[loc] = color(x%255);
     }
   }
