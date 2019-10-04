@@ -18,6 +18,38 @@ De esta manera, nuestra imagen podrá interactuar con imagenes creadas y transfo
 
 Vamos a ver algunos objetos extras que nos servirán para transformar pixeles
 
+## Antes de iniciar: Dibujar figuras con máscaras
+
+Es posible dibujar figuras con el relleno de una imagen. Para realizar esto es necesario hacer una máscara con PGraphics. No hemos visto este objeto y provisionalmente solo lo mencionaremos para resolver el problema.
+
+Hay formas más elegantes de realizar esto que nos pueden servir para hacer mapping. Mostrar un ejemplo de mapping y mostrar el mapeo del CMM. 
+
+A continuación el código que realiza esto:
+
+```java
+PGraphics mask;
+PImage img;
+void setup(){
+  size(500,500);
+
+  img=loadImage("screen001.png");
+  img.resize(500,500);
+  background(255);
+  
+  mask=createGraphics(width,height);//dibujar el objeto máscara
+  
+  mask.beginDraw();
+  mask.background(0); // fondo
+  mask.fill(255); // 
+  mask.ellipse(width/2,height/2, 250, 250);
+  mask.endDraw();
+ 
+ 
+  img.mask(mask);
+  image(img,0,0);
+}
+```
+
 ## Imágenes Pixeles
 
 Una imagen digital está compuesta por datos. Estos datos son números que indican variaciones de RGB en un punto específico de la cuadrícula de pixeles que compone la imagen. 
