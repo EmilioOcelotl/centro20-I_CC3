@@ -1,4 +1,3 @@
-
 # Clase 9
 
 En esta clase vamos a ejercitar la manipulación de imágenes con Processing. 
@@ -18,6 +17,10 @@ En el contexto de las computadoras
 ¿Qué es un glitch?
 
 ¿Qué es el error?
+
+Un ejemplo de glitch-art y video relativamente controlado: 
+
+[kangding ray // these are my rivers](https://www.youtube.com/watch?v=w-Q4qzeuV-8)
 
 ## Imagen como sonido. Databending con programas para editar audio. 
 
@@ -46,7 +49,6 @@ También es posible utilizar convertidores en línea
 [Convertidor en línea](https://www.audacityteam.org/download/)
 
 Una vez que tenemos una imagen en un formato sin compresión vamos a abrirla con Audacity
-
 
 ### Abrir una imagen con Audacity
 
