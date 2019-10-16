@@ -22,9 +22,9 @@ Objetivo del curso: Aplicar procesos algorítmicos para la conceptualización y 
 
 - [x] [Semana 30 de septiembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_191004/README.md) - Clase 8.
 
-- [ ] [Semana 7 - 11 de octubre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_191011/README.md) - Clase 9.
+- [x] [Semana 7 - 11 de octubre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_191011/README.md) - Clase 9.
 
-- [ ] Semana 14 - 18 de octubre - Clase 10. Práctica de manipulación de imagen fija
+- [ ] [Semana 14 - 18 de octubre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_191018/README.md) - Clase 10. 
 
 - [ ] Semana 21 - 25 de octubre - Clase 11. Trigonometría I
 
