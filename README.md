@@ -1,4 +1,4 @@
-# Código Creativo 2020-I Tercer Semestre
+}# Código Creativo 2020-I Tercer Semestre
 
 ![portada](https://github.com/EmilioOcelotl/centro20-I_CC3/blob/master/img/portada3.png)
 
@@ -36,7 +36,7 @@ Objetivo del curso: Aplicar procesos algorítmicos para la conceptualización y 
 
 - [X] [Semana 18 - 22 de noviembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_191122/README.md) - Clase 15. Sonido e Imagen
 
-- [ ] Semana 25 - 29 de noviembre - Clase 16. Análisis de audio
+- [X] [Semana 25 - 29 de noviembre](https://github.com/EmilioOcelotl/centro20-I_CC3/tree/master/centro3_191129/README.md)) - Clase 16. Análisis de audio
 
 ## Evaluación 
 
